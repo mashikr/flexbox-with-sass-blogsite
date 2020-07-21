@@ -6,6 +6,14 @@
     box-shadow: var(--shadow-dark);
 
     display: flex;
+
+    @media only screen and (max-width: $bp-largest) {
+       margin: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .navbar-section {
@@ -18,9 +26,17 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0;
+        padding-top: 2rem;
+    }
 }
 .navbar-bottom {
     text-align: center;
+    @media only screen and (max-width: $bp-small) {
+        display: none;
+    }
 }
 
 .main-content {
@@ -31,6 +47,11 @@
 
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 5rem;
+    }
+
 }
 
 .post-section {

@@ -1,0 +1,220 @@
+:root {
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --primary-bg: #07dbfdb3;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+  --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+  --line: 1px solid var(--color-grey-light-2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--primary-bg);
+}
+
+.wrapper {
+  max-width: 1200px;
+  min-height: 100vh;
+  background-color: #fff;
+  margin: 5rem auto;
+  box-shadow: var(--shadow-dark);
+  display: flex;
+}
+
+.navbar-section {
+  background-color: var(--primary);
+  height: auto;
+  padding: 3rem 0;
+  flex: 0 0 20%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar-bottom {
+  text-align: center;
+}
+
+.main-content {
+  background-color: var(--light);
+  min-height: 100vh;
+  padding: 8rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-section {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.navbar {
+  height: auto;
+}
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2rem;
+}
+.navbar-logo-icon {
+  width: 8rem;
+}
+.navbar-list {
+  list-style: none;
+}
+.navbar-item {
+  position: relative;
+}
+.navbar-item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.navbar-item::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  position: absolute;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in;
+}
+.navbar-item:hover::before, .navbar-item-active::before {
+  transform: scaleX(1);
+}
+.navbar-item:hover a, .navbar-item-active a {
+  color: var(--primary) !important;
+}
+.navbar-link:link, .navbar-link:visited {
+  position: relative;
+  display: block;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  z-index: 10;
+  font-size: 1.8rem;
+}
+.navbar-link:link i, .navbar-link:visited i {
+  margin-right: 0.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.social-icons-inner {
+  background-color: #fff;
+  color: var(--primary);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons-inner:hover {
+  opacity: 0.7;
+}
+
+.search {
+  align-self: flex-end;
+  margin-bottom: 3rem;
+}
+.search-input {
+  padding: 1rem;
+  width: 40rem;
+  border: 1px solid var(--primary);
+  outline-color: var(--info);
+  border-radius: 0.5rem;
+}
+.search-btn {
+  color: #fff;
+  background-color: var(--primary);
+  font-size: 1.4rem;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+.post {
+  padding: 3rem 0;
+  margin: 2rem 0;
+  flex: 0 0 48%;
+  border-top: 0.3rem solid var(--primary);
+  box-shadow: var(--shadow-md);
+}
+.post-image {
+  width: 100%;
+}
+.post-body {
+  padding: 2rem;
+}
+.post-title {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+.post-content {
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  color: var(--dark);
+  text-align: justify;
+}
+.post-description {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  color: var(--primary);
+}
+.post-description a:link,
+.post-description a:visited {
+  text-decoration: none;
+  color: var(--primary);
+}
+.post-description a:link:hover,
+.post-description a:visited:hover {
+  text-decoration: underline;
+}
+.post hr {
+  margin: 1rem 0;
+  color: var(--dark);
+}
+.post-reaction {
+  display: flex;
+  justify-content: space-between;
+  color: var(--dark);
+}

@@ -1,37 +1,21 @@
-/*
-COLORS
-
-Primary: #eb2f64
-Primary light: #FF3366
-Primary dark: #BA265D
-
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
-*/
-
 :root {
-    --color-primary: #eb2f64;
-    --color-primary-light: #FF3366;
-    --color-primary-dark: #BA265D;
-    --color-grey-light-1: #faf9f9;
-    --color-grey-light-2: #f4f2f2;
-    --color-grey-light-3: #f0eeee;
-    --color-grey-light-4: #ccc;
-
-    --color-grey-dark-1: #333;
-    --color-grey-dark-2: #777;
-    --color-grey-dark-3: #999;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --primary-bg: #07dbfdb3;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
 
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
-
+    
     --line: 1px solid var(--color-grey-light-2);
 }
 
@@ -55,5 +39,9 @@ $bp-smallest: 31.25em; // 500px
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+}
 
+body {
+    font-size: 1.6rem;
+    background-color: var(--primary-bg);
 }
